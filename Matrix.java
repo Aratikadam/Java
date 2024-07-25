@@ -74,29 +74,28 @@ class Matrix1
         }
         }
         void Multi()
-{
-    System.out.println("Multiplication of two Matrix is: ");
-    for(i=0; i<2; i++)
-    {
-        for(j=0; j<2; j++)
         {
-            multi[i][j] = 0;
+            System.out.println("Multiplication of two Matrix is: ");
+            for(i=0; i<2; i++)
+            {
+                for(j=0; j<2; j++)
+                {
+                    multi[i][j] = 0;
 
-            for(int k=0; k<2; k++)
-                multi[i][j] += Mat1[i][k] * Mat2[k][j];
-        }
-    }
+                    for(int k=0; k<2; k++)
+                        multi[i][j] += Mat1[i][k] * Mat2[k][j];
+                }
+            }
     
-    // Print the result matrix multi
-    for(i=0; i<2; i++)
-    {
-        for(j=0; j<2; j++)
-        {
-            System.out.print(multi[i][j] + " ");
+            for(i=0; i<2; i++)
+            {
+                for(j=0; j<2; j++)
+                {
+                    System.out.print(multi[i][j] + " ");
+                }
+                System.out.println();
+            }
         }
-        System.out.println();
-    }
-}
     }
  
 class Matrix
