@@ -3,9 +3,9 @@ import java.util.Scanner;
 class Matrix1
 {
         int i,j,sum,sub;
-        int multi[][]=new int[2][2];
         int Mat1[][]=new int[2][2];
         int Mat2[][]=new int[2][2];
+        int multi[][]=new int[2][2];
         Scanner sc = new Scanner(System.in);
         void getData()
         {
@@ -74,22 +74,29 @@ class Matrix1
         }
         }
         void Multi()
+{
+    System.out.println("Multiplication of two Matrix is: ");
+    for(i=0; i<2; i++)
+    {
+        for(j=0; j<2; j++)
         {
-        System.out.println("Multiplication of two Matrix is: ");
-        for(i=0;i<2;i++)
+            multi[i][j] = 0;
+
+            for(int k=0; k<2; k++)
+                multi[i][j] += Mat1[i][k] * Mat2[k][j];
+        }
+    }
+    
+    // Print the result matrix multi
+    for(i=0; i<2; i++)
+    {
+        for(j=0; j<2; j++)
         {
-            for(j=0;j<2;j++)
-            {
-                multi[i][j]=0;
-                for(int k=0;k<2;k++)
-                {
-                multi[i][j]+=Mat1[i][k]*Mat2[k][j];
-                }
-            }
-            System.out.print( multi[i][j] + " ");
+            System.out.print(multi[i][j] + " ");
         }
         System.out.println();
-        }
+    }
+}
     }
  
 class Matrix
